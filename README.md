@@ -1,0 +1,55 @@
+## Notas de Git
+
+- Motivación dos sistemas de control de versións. Historial e traballo paralelo
+- Dependencias (descargalas)
+    - git
+    - gh (ou semellantes)
+- Conceptos base
+    - Configuracion
+        - obtela con `git config --list --show-origin`
+    - Copias, Remotos, Descargas
+        - clonar con `git clone https://github.com/fisicaUSC/claseGit`
+        - engadilos con `git remote add <NOME> <URL>`
+        - cambialos con `git remote rename <NOME> <NOVO_NOME>`
+        - quitalos con `git remote remove <NOME>`
+    - Estructura de GIT:
+        - Espazo de traballo
+            - Ver que temos con `git status`
+            - Ver os cambios con `git diff`
+            - Ver o historial con `git log [--oneline --graph]`
+            - Engadir cambios ao espazo de traballo normalmente
+        - Índice/zona de preparación (staging area)
+            - Engadir cambios ao índice con `git add/stage <O QUE>`
+        - Repositorio, `.git`, Contribucións
+            - Que é unha contribución. Hashes, pais, DAGs
+            - Engadir cambios ao repositorio con `git commit [-m 'mensaxe']`
+        - Apañar cousas que están mal
+            - Eliminar cambios do espazo de traballo con `git reset <O QUE>`
+            - Eliminar cambios do índice con `git reset --staged <O QUE>`
+            - Apañar última mensaxe con `git commit --ammend`
+            - Eliminar contribucións, *mala idea* `git reset [--soft|hard] <ATA ONDE>`
+        - Ramas
+            - Crear unha rama con `git branch <RAMA> [BASE]`
+            - Cambiar con `git switch <RAMA>`
+            - Mencionar `--detach`
+            - Ramas remotas
+- Xuntar ramas
+    - Xuntar con `git merge`
+        - con FF, move punteiros
+        - sen FF, crea contribución nova
+    - Esmagar con `git merge --squash`
+    - Aplicar individualmente con `git cherry-pick`
+    - Rebasar con `git rebase`
+    - Conflitos, marcas de conflito e tal
+    - Repaso remotos
+        - descargar cambios con `git fetch`, actualiza rama remota
+        - actualizar as locais con `git pull`, que é `fetch + merge`
+- Rede
+    - Copias Remotas
+    - Fluxo de traballo triangular
+    - Cambios locais, subir unha rama á copia remota, peticións
+- Cousas algo máis avanzadas
+    - Sobreescribir a historia cun rebasado interactivo
+    - Sobreescribir a historia con `filter-repo`
+    - Hooks
+    - LFS, Annex
