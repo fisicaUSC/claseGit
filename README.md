@@ -48,7 +48,9 @@
     - Copias Remotas
     - Fluxo de traballo triangular
     - Cambios locais, subir unha rama á copia remota, peticións
-- Cousas algo máis avanzadas
+- Cousas tontas ou algo máis avanzadas
+    - Culpa
+    - Editores
     - Sobreescribir a historia cun rebasado interactivo
     - Sobreescribir a historia con `filter-repo`
     - Hooks
